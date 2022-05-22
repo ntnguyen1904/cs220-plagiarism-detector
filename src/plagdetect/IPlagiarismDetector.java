@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.Map;
+import java.util.Scanner;
 
 /**
  * Interface for a plagiarism detector based on n-grams.
@@ -17,15 +18,14 @@ import java.util.Map;
  * @author jspacco
  *
  */
-public interface IPlagiarismDetector
-{
+public interface IPlagiarismDetector {
     /**
      * Get n, the number of words in each n-gram
      * 
      * @return
      */
     int getN();
-    
+
     /**
      * Return a collection of the names of the files that have been processed.
      * 
