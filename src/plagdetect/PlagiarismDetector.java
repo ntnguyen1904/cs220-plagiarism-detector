@@ -117,6 +117,9 @@ public class PlagiarismDetector implements IPlagiarismDetector {
 					} else if (file1.compareTo(file2) > 0) {
 						newPair = file2 + " " + file1 + " " + getNumNGramsInCommon(file1, file2);
 					}
+//					pairs.add(newPair);
+				}
+				if (!pairs.contains(newPair)){
 					pairs.add(newPair);
 				}
 			}

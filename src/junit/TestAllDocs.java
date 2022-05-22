@@ -26,6 +26,9 @@ class TestAllDocs {
 		// how long does it take to create a detector?
 		long start = System.currentTimeMillis();
 		IPlagiarismDetector detector = makeDetector(3);
+//		IPlagiarismDetector detector = makeDetector(8);
+//		IPlagiarismDetector detector = makeDetector(5);
+		
 		long total = System.currentTimeMillis() - start;
 		System.out.printf("It took %.1f seconds to read the documents\n", total/1000.0);
 		
@@ -36,18 +39,11 @@ class TestAllDocs {
 		// The average essay is less than 500 words long.
 		// What is a good number to put here? Try some different values to
 		// figure that out!
-		Collection<String> pairs1 = detector.getSuspiciousPairs(50);
-		Collection<String> pairs2 = detector.getSuspiciousPairs(100);
-		Collection<String> pairs3 = detector.getSuspiciousPairs(150);
+//		Collection<String> pairs1 = detector.getSuspiciousPairs(150);
+		Collection<String> pairs1 = detector.getSuspiciousPairs(100);
+//		Collection<String> pairs1 = detector.getSuspiciousPairs(50);
+		
 		for (String pair : pairs1) {
-			System.out.println(pair);
-		}
-		for (String pair : pairs2) {
-			System.out.println("\n");
-			System.out.println(pair);
-		}
-		for (String pair : pairs3) {
-			System.out.println("\n");
 			System.out.println(pair);
 		}
 		
